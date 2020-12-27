@@ -1,0 +1,22 @@
+
+<section class="wrapper r-grid c-produtos">
+    <div class="card" *ngFor="let p of produto">
+        <div class="box-img">
+            <div class="i-marca">
+                <img src="{{p.marca}}" alt="">
+            </div>
+            <div class="c-img">
+                <img src="{{p.imagem}}" alt="{{p.nome}}">
+            </div>
+        </div>
+        <div class="c-info">
+            <h1 class="name">{{p.nome | uppercase}}</h1>
+            <p class="descricao">{{p.descricao}}</p>
+            <h3 class="price">{{p.preco}}</h3>
+        </div>
+        <div class="c-action c-flex">
+            <button *ngIf="!p.noCarrinho" class="btn-add" (click)="p.actionCart(); incrementa()">Adicionar ao carrinho</button>
+            <button *ngIf="p.noCarrinho" class="btn-remove" (click)="p.actionCart(); decrementa()">Remover do carrinho</button>
+        </div>
+    </div>
+</section>

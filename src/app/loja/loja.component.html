@@ -1,0 +1,22 @@
+<div class="bg-top">
+    <header class="wrapper">
+        <div class="brand">
+            <img src="../../assets/images/marcas/centauro.svg" alt="Centauro">
+        </div>
+        <div class="box-menu r-flex">
+            <form action="/" method="dialog" class="filter r-flex">
+                <input type="search" placeholder="Busca">
+                <button class="btn-search"><span></span></button>
+            </form>
+            <ul class="nav-menu r-flex">
+                <li><a href="#!">ESPORTE</a></li>
+                <li><a href="#!">LAZER</a></li>
+                <li><a href="#!">MARCAS</a></li>
+            </ul>
+            <div class="cart">
+                <span>{{ qtdNoCarrinho }}</span>
+            </div>
+        </div>
+    </header>
+</div>
+<app-produto [produto]="listaProdutos" (addCart)="getQtd($event)"></app-produto>

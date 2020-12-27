@@ -1,27 +1,55 @@
-# Loja
+<div align='center'>
+<img src=".github/logo.png" width='250'>
+</div>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.4.
+## 🚀 Atividade
 
-## Development server
+Crie uma aplicação de loja simples com as seguintes funcionalidades:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- um componente-pai Loja que contém uma propriedade array de objetos. O tamanho fica a seu critério e cada objeto tem essa configuração:
 
-## Code scaffolding
+{
+nome: “nome do produto”,
+preco: “R$ 0,00”,
+imagem: “escolha uma imagem da internet e copie sua url aqui”,
+noCarrinho: true ou false
+}
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- o componente-pai irá, por meio da diretiva *ngFor, passar cada um dos produtos para um componente-filho Produto;
+- cada componente-filho Produto irá exibir o objeto recebido pelo componente-pai por meio da interpolação;
+- cada produto exibido no componente-filho deve conter o botão colocar no carrinho verde, que irá emitir um evento para o componente-pai ao mesmo tempo que altera o valor do atributo noCarrinho para true;
+- se o atributo noCarrinho de um produto está true, o botão deve alterar sua cor para vermelha e seu texto para retirar do carrinho, desta vez alterando o atributo para false;
+- o componente-pai deve exibir a quantidade de itens que estão no carrinho em um texto semelhante à “itens no carrinho: 2”;
+- o nome do produto deve ser exibido com todas as letras em maiúsculo, utilizando um pipe.
 
-## Build
+---
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+# 📚 O que eu aprendi com o projeto!
 
-## Running unit tests
+- Criar projetos, modulos e componentes com Angular CLI;
+- Passagem de dados entre componentes usando @Input e @Output;
+- Aplicar eventos em elementos;
+- Trabalhar com template string.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# 💻 Tecnologias
 
-## Running end-to-end tests
+<a href='https://angular.io/'>Angular.js</a>
+<br/>
+<a href='https://www.typescriptlang.org/'>TypeScript</a>
+<br/>
+<a href='https://www.w3schools.com/html/'>HTML5</a>
+<br/>
+<a href='https://www.w3schools.com/css/'>CSS3</a>
+<br/>
+<a href='https://code.visualstudio.com/'>Visual Studio Code</a>
+<br/>
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+# 📝 Sobre o projeto
 
-## Further help
+- Curso Angular JS
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Este é um projeto acadêmico. Seu principal objetivo é facilitar a avaliação dos professores.
+
+---
+
+O aprendizado é contínuo e o próximo nível nunca será o último 🚀 by [aalvs](https://app.rocketseat.com.br/me/aalvs).
